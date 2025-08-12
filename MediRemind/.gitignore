@@ -36,4 +36,26 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
+# VSCode settings
+.vscode/
+
+# IntelliJ / IDEA settings
+.idea/
+
+# Metro bundler cache
+.cache/
+
+# Watchman
+.watchmanconfig
+
+# Expo CLI cache
+.expo-shared/
+
+# Optional: if you have tests coverage reports
+coverage/
+
+# OS-specific
+Thumbs.db
+
+#Example app dataa
 app-example
