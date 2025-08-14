@@ -1,4 +1,4 @@
-import React, { useState, useCallback, JSX } from "react";
+import React, { useState, useCallback } from "react";
 import {
   View,
   Text,

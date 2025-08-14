@@ -38,6 +38,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "5b635d8a-90d7-4f6b-abc9-90eb9f2bbc7c"
+      }
+    },
+    "owner": "deon_thomas"
   }
 }
