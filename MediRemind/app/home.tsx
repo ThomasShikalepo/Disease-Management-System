@@ -383,14 +383,14 @@ export default function HomeScreen() {
         visible={false}
         animationType="slide"
         transparent={true}
-        onRequestClose={() => setShowNotifications(true)}
+        onRequestClose={() => setShowNotifications(false)}
       >
         <View style={styles.modalOverlay}>
           <View style={styles.modalContent}>
             <View style={styles.modalHeader}>
               <Text style={styles.modalTitle}>Notifications</Text>
               <TouchableOpacity
-                onPress={() => setShowNotifications(true)}
+                onPress={() => setShowNotifications(false)}
                 style={styles.closeButton}
               >
                 <Ionicons name="close" size={24} color="#333" />

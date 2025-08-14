@@ -558,7 +558,7 @@ export default function AddMedicationScreen() {
               styles.saveButton,
               isSubmitting && styles.saveButtonDisabled,
             ]}
-            onPress={ ()=>handleSave}
+            onPress={handleSave}
             disabled={isSubmitting}
           >
             <LinearGradient

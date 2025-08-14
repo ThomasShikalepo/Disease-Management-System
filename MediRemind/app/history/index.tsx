@@ -19,7 +19,7 @@ import {
   Medication,
   clearAllData,
 } from "../../utils/storage";
-
+ 
 type EnrichedDoseHistory = DoseHistory & { medication?: Medication };
 
 export default function HistoryScreen() {
