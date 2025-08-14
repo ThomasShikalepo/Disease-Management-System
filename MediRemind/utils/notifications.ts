@@ -1,6 +1,6 @@
-import * as Notifications from 'expo-notifications'
-import { Platform } from 'react-native'
-import { Medication } from './storage'
+import * as Notifications from 'expo-notifications';
+import { Platform } from 'react-native';
+import { Medication } from './storage';
 
 Notifications.setNotificationHandler({
   handleNotification: async () => ({

@@ -1,32 +1,32 @@
-import { useState, useEffect, useRef, useCallback } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  TouchableOpacity,
-  Dimensions,
-  Animated,
-  Modal,
-  Alert,
-  AppState,
-} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { Link, useRouter } from "expo-router";
-import { LinearGradient } from "expo-linear-gradient";
-import Svg, { Circle } from "react-native-svg";
-import {
-  getMedications,
-  Medication,
-  getTodaysDoses,
-  recordDose,
-  DoseHistory,
-} from "../utils/storage";
 import { useFocusEffect } from "@react-navigation/native";
+import { LinearGradient } from "expo-linear-gradient";
+import { Link, useRouter } from "expo-router";
+import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  Alert,
+  Animated,
+  AppState,
+  Dimensions,
+  Modal,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import Svg, { Circle } from "react-native-svg";
 import {
   registerForPushnotificationAsync,
   scheduleMedicationReminder,
 } from "../utils/notifications";
+import {
+  DoseHistory,
+  getMedications,
+  getTodaysDoses,
+  Medication,
+  recordDose,
+} from "../utils/storage";
 
 const { width } = Dimensions.get("window");
 
@@ -44,7 +44,7 @@ const QUICK_ACTIONS = [
   {
     icon: "calendar-outline" as const,
     label: "Calendar\nView",
-    route: "./calendar" as const,
+    route: "./calendar/index" as const,
     color: "#1976D2",
     gradient: ["#2196F3", "#1976D2"] as [string, string],
   },
@@ -383,14 +383,14 @@ export default function HomeScreen() {
         visible={false}
         animationType="slide"
         transparent={true}
-        onRequestClose={() => setShowNotifications(false)}
+        onRequestClose={() => setShowNotifications(true)}
       >
         <View style={styles.modalOverlay}>
           <View style={styles.modalContent}>
             <View style={styles.modalHeader}>
               <Text style={styles.modalTitle}>Notifications</Text>
               <TouchableOpacity
-                onPress={() => setShowNotifications(false)}
+                onPress={() => setShowNotifications(true)}
                 style={styles.closeButton}
               >
                 <Ionicons name="close" size={24} color="#333" />
